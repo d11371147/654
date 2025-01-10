@@ -1,0 +1,489 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TXT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Wrapper */
+			#wrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			/* Main Content (Left side) */
+			#main {
+				flex: 1; /* 使主內容自適應空間 */
+			}
+
+			/* Sidebar */
+			#sidebar {
+				position: relative; /* 相對定位 */
+				width: 300px; /* 設定 Sidebar 寬度 */
+				background-color: #f4f4f4; /* 設置背景顏色 */
+				padding: 20px;
+				height: auto; /* 根據內容自動調整高度 */
+				/* 去除陰影效果 */
+				box-shadow: none;
+			}
+
+			/* 優化 Sidebar 內部的樣式 */
+			#sidebar .blurb {
+				font-size: 0.9rem;
+				margin-bottom: 20px;
+			}
+
+			#sidebar .blurb h3 {
+				font-size: 1.2rem;
+				margin-bottom: 10px;
+			}
+
+			/* 調整迷你專輯顯示的樣式 */
+			#sidebar .mini-posts {
+				list-style: none;
+				padding: 0;
+			}
+
+			#sidebar .mini-posts .mini-post {
+				margin-bottom: 20px;
+			}
+
+			#sidebar .mini-posts .mini-post .image img {
+				width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">首頁</a></h1>
+				<nav class="links">
+					<ul>
+						<li><a href="1.html">최연준</a></li>
+						<li><a href="2.html">최수빈</a></li>
+						<li><a href="3.html">최범규</a></li>
+						<li><a href="4.html">강태현</a></li>
+						<li><a href="5.html">휴닝카이</a></li>
+					</ul>
+				</nav>
+			</nav>
+            <nav class="icons">
+                <ul>
+                    <li><a href="https://twitter.com/TXT_bighit" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/TXT.bighit" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.snapchat.com/add/txt_bighitmusic" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                    <li><a href="https://www.instagram.com/txt_bighit/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://www.weibo.com/TXTbighit" class="icon brands fa-weibo"><span class="label">Weibo</span></a></li>
+                    <li>
+                        <a href="https://txt.ibighit.com/" class="icon brands txt">
+                            <img src="images/icon.png" alt="txt icon" class="txt-icon" />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+		<style>
+			
+			/* 設置所有圖標顏色為默認顏色 */
+			.icons .icon {
+				color: #333; /* 設定默認顏色，這裡用 #333 為例 */
+				font-size: 24px; /* 設置圖標的大小 */
+				transition: color 0.3s, transform 0.3s; /* 添加顏色和縮放的過渡效果 */
+			}
+	
+			/* 保持圖片圖標的顏色與其他圖標一致 */
+			.icons .txt {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+	
+			.icons .txt img {
+				width: 25px; /* 設置圖片圖標大小 */
+				height: auto;
+				transition: filter 0.3s, transform 0.3s;
+			}
+	
+			/* 懸停時的顏色效果 */
+			.icons .icon:hover {
+				color: #1da1f2; /* 設置懸停時顏色，這裡使用 Twitter 藍色為例 */
+			}
+	
+			/* 懸停時，圖片也會改變顏色，與其他圖標一致 */
+			.icons .txt:hover img {
+				filter: brightness(80%) saturate(60%) invert(32%) sepia(89%) saturate(300%) hue-rotate(118deg) brightness(175%) contrast(30%); /* 這是模擬 Twitter 藍色的顏色變化 */
+			}
+	
+			/* 響應式設置，在手機屏幕上顯示較小的圖標 */
+			@media (max-width: 768px) {
+				.icons .txt img {
+					width: 20px; /* 在手機上顯示較小的圖標 */
+				}
+			}
+	
+			.icons .txt {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding-top: 15px; /* 增加上內邊距使圖標向下移動 */
+			}
+		</style>
+		 <nav class="main">
+			<ul>
+				<li class="search">
+					<a class="fa-search" href="#search">Search</a>
+					<form id="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</li>
+				<li class="menu">
+					<a class="fa-bars" href="#menu">Menu</a>
+				</li>
+			</ul>
+		
+	</header>
+	
+       
+		 <!-- Menu -->
+		 <section id="menu">
+
+			<!-- Search -->
+			<style>
+				/* 設置圖示容器為 Flexbox 佈局 */
+				.icons ul {
+				  display: flex;
+				  justify-content: flex-start; /* 左對齊或根據需要調整 */
+				  padding: 0;
+				  margin: 0;
+				  list-style: none;
+				  gap: 15px; /* 圖示之間的間距 */
+				}
+			  
+				/* 去除圖示文字下劃線 */
+				.icons a {
+				  text-decoration: none; /* 去掉鏈接文字的下劃線 */
+				}
+			  
+				/* 設置圖示大小 */
+				.icons .icon {
+				  font-size: 24px; /* 可以根據需要調整圖示的大小 */
+				}
+			  
+				/* 增加圖示與搜尋框之間的距離 */
+				.main {
+				  margin-left: 30px; /* 調整左邊距離，使圖示和搜尋框間距變大 */
+				}
+			  
+			  </style>
+     
+	
+	
+</header>
+
+            <!-- Search -->
+            <section>
+                <form class="search" method="get" action="#">
+                    <input type="text" name="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Links -->
+            <section>
+                <ul class="links">
+                    <li>
+                        <a href="#">
+                            <h3>Lorem ipsum</h3>
+                            <p>Feugiat tempus veroeros dolor</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Dolor sit amet</h3>
+                            <p>Sed vitae justo condimentum</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Feugiat veroeros</h3>
+                            <p>Phasellus sed ultricies mi congue</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Etiam sed consequat</h3>
+                            <p>Porta lectus amet ultricies</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Actions -->
+            <section>
+                <ul class="actions stacked">
+                    <li><a href="#" class="button large fit">Log In</a></li>
+                </ul>
+            </section>
+
+        </section>
+			</header>
+			
+
+			<!-- Main -->
+			<div id="main">
+				<!-- Post -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="talk x today.html">TOMORROW X TOGETHER</a></h2>
+							<p>ONE DREAM! 안녕하세요 투모로우바이투게더입니다!</p>
+						</div>
+						<div class="meta">
+							<time class="published" datetime="2015-11-01">November 1, 2015</time>
+							<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+						</div>
+					</header>
+					<a href="talk x today.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+					<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat...</p>
+					<footer>
+						<ul class="actions">
+							<li><a href="talk x today.html" class="button large">Continue Reading</a></li>
+						</ul>
+						<ul class="stats">
+							<li><a href="#">General</a></li>
+							<li><a href="#" class="icon solid fa-heart">28</a></li>
+							<li><a href="#" class="icon solid fa-comment">128</a></li>
+						</ul>
+					</footer>
+				</article>
+				<!-- Post -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="talk x today.html">TALK X TODAY 第一季</a></h2>
+							<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+						</div>
+						<div class="meta">
+							<time class="published" datetime="2019-03-11">March 11, 2019</time>
+							<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+						</div>
+					</header>
+					<a href="talk x today.html" class="image featured"><img src="images/talk x today 1.jpg" alt="" /></a>
+					<p>《TALK X TODAY 第一季》主要為紀錄2019年1月初至3月出道前TOMORROW X TOGETHER的日常，
+						內容包括個人VLOG、團體VLOG、練習花絮及與製作人Slow Rabbit在錄音室製作與準備出道迷你專輯《The Dream Chapter: STAR》的過程</p>
+					<footer>
+						<ul class="actions">
+							<li><a href="single.html" class="button large">Continue Reading</a></li>
+						</ul>
+						<ul class="stats">
+							<li><a href="#">General</a></li>
+							<li><a href="#" class="icon solid fa-heart">28</a></li>
+							<li><a href="#" class="icon solid fa-comment">128</a></li>
+						</ul>
+					</footer>
+				</article>
+
+			<!-- Post -->
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="talk x today.html">TALK X TODAY 第二季</a></h2>
+							<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+						</div>
+						<div class="meta">
+							<time class="published" datetime="2015-10-22">October 22, 2015</time>
+							<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+						</div>
+					</header>
+					<a href="talk x today.html" class="image featured"><img src="images/talk x today 2.jpg" alt="" /></a>
+					<p>《TALK X TODAY 第二季 》主要紀錄出道後在忙碌的日程過後的TOMORROW X TOGETHER成員們，享受閒暇時間的模樣。</p>
+					<footer>
+						<ul class="actions">
+							<li><a href="talk x today.html" class="button large">Continue Reading</a></li>
+						</ul>
+						<ul class="stats">
+							<li><a href="#">General</a></li>
+							<li><a href="#" class="icon solid fa-heart">28</a></li>
+							<li><a href="#" class="icon solid fa-comment">128</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
+			<!-- Sidebar -->
+			<section id="sidebar">
+				<!-- Intro -->
+				<section id="intro">
+					<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+					<header>
+						<section class="blurb">
+							<h3>About</h3>
+							<p>TOMORROW X TOGETHER
+								<br>
+								（韓語：투모로우바이투게더；
+								<br>
+								日語：トゥモローバイトゥギャザー）
+								<br>
+								<br>
+								簡稱TXT，為韓國BIGHIT MUSIC於2019年推出的男子音樂團體，由然竣、秀彬、杋圭、太顯、休寧凱五位成員組成，由秀彬擔任隊長。官方粉絲名為MOA。</p>
+							<ul class="actions">
+								<li><a href="learn more.html" class="button">Learn More</a></li>
+							</ul>
+						</section>
+					</header>
+				</section>
+
+				<!-- Mini Posts -->
+				<section>
+					<div class="mini-posts">
+
+						<!-- 專輯1 -->
+							<article class="mini-post">
+								<header>
+									<h3><a href="talk x today-1.html">The Dream Chapter: MAGIC</a></h3>
+									<time class="published" datetime="2019-10-21">October 21, 2019</time>
+									<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							</article>
+
+						<!-- 專輯2 -->
+							<article class="mini-post">
+								<header>
+									<h3><a href="talk x today.html">The Chaos Chapter: FREEZE</a></h3>
+									<time class="published" datetime="2021-05-31">May 31, 2021</time>
+									<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							</article>
+
+						<!-- 專輯3 -->
+							<article class="mini-post">
+								<header>
+									<h3><a href="talk x today.html">The Name Chapter: FREEFALL</a></h3>
+									<time class="published" datetime="2023-10-13">October 13, 2023</time>
+									<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
+							</article>
+
+						<!--專輯4 -->
+							<article class="mini-post">
+								<header>
+									<h3><a href="talk x today.html">Enim nisl veroeros</a></h3>
+									<time class="published" datetime="2021-01-20">January 20, 2021</time>
+									<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- 迷你專輯 -->
+				<section>
+					<ul class="posts">
+						<li>
+							<article>
+								<header>
+									<h3><a href="talk x today.html">The Dream Chapter: STAR</a></h3>
+									<time class="published" datetime="2019-03-04">March 04, 2019</time>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic08.jpg" alt="" /></a>
+							</article>
+						</li>
+						<li>
+							<article>
+								<header>
+									<h3><a href="talk x today.html">The Dream Chapter: ETERNITY</a></h3>
+									<time class="published" datetime="2015-10-15">October 15, 2015</time>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic09.jpg" alt="" /></a>
+							</article>
+						</li>
+						<li>
+							<article>
+								<header>
+									<h3><a href="talk x today.html">minisode 1: Blue Hour</a></h3>
+									<time class="published" datetime="2020-10-26">October 26, 2020</time>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic10.jpg" alt="" /></a>
+							</article>
+						</li>
+						<li>
+							<article>
+								<header>
+									<h3><a href="talk x today.html">minisode 2: Thursday's Child</a></h3>
+									<time class="published" datetime="2022-5-09">may 09, 2022</time>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic11.jpg" alt="" /></a>
+							</article>
+						</li>
+						<li>
+							<article>
+								<header>
+									<h3><a href="talk x today.html">The Name Chapter: TEMPTATION</a></h3>
+									<time class="published" datetime="2023-1-27">January 27, 2023</time>
+								</header>
+								<a href="talk x today.html" class="image"><img src="images/pic12.jpg" alt="" /></a>
+							</article>
+						</li>
+					</ul>
+				</section>
+
+
+		</div>
+
+		<style>
+			/* Footer部分居中 */
+			#footer {
+				width: 100%;
+				text-align: center; /* 让文本居中 */
+				padding: 20px;
+				background-color: #f1f1f1; /* 可以根据需要调整背景颜色 */
+			}
+		
+			/* 底部图标的居中 */
+			#footer .icons {
+				display: flex;
+				justify-content: center; /* 水平居中 */
+				margin-bottom: 10px;
+			}
+		
+			#footer .icons li {
+				margin: 0 15px; /* 图标间距 */
+			}
+		
+			/* 调整图标大小 */
+			#footer .txt-icon {
+				width: 40px; /* 根据需要调整图标大小 */
+				height: auto;
+			}
+		
+			/* 底部文本的样式 */
+			#footer .copyright {
+				font-size: 8px;
+				color: hsl(0, 0%, 67%); /* 你可以根据需要修改字体颜色 */
+			}
+		</style>
+	
+	   
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			
+			<li><a href="https://txt.ibighit.com/" class="icon brands txt">
+				<img src="images/txt.png" alt="txt icon" class="txt-icon" /></a></li>
+			
+		</ul>
+		<p class="copyright">ONE DREAM! 안녕하세요 투모로우바이투게더입니다!</p>
+	</section>
+	</html>
+	
